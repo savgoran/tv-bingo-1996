@@ -18,6 +18,8 @@ The release includes the original `tombola.zip` archive together with its SHA-25
 
 The original DOS/Clipper build referenced commercial third-party development tools and libraries that are **not included in this repository**, including CA-Clipper, Blinker, SuccessWare SIX/SIXCDX, CA-Tools, Light Lib Graphics, and Sentinel/SuperPro components.
 
+Some low-level hardware-support routines appear to have been adapted from contemporaneous programming references or examples; exact provenance is still being documented.
+
 The repository is preserved primarily for historical and technical study. Reproducing the original executable requires compatible historical development tools and dependencies.
 
 ## License
