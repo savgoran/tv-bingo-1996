@@ -1,0 +1,41 @@
+makepath[.asm] := \TOMBOLA\TOPVOLEY\IZV\PRG
+makepath[.prg] := \TOMBOLA\TOPVOLEY\IZV\PRG
+makepath[.obj] := \TOMBOLA\TOPVOLEY\IZV\OBJ
+
+#ifdef PROF
+   CompOptions := /m /n /l
+#else
+   CompOptions := /m /n 
+#endif
+
+#ifdef ZASTITA
+   CompOptions := /m /n /l /dZASTITA
+#endif
+
+.prg.obj:
+	 CLIPPER $< /o$@ $(CompOptions)
+
+.asm.obj:
+	 MASM $<,$@;
+
+DISPKAR.OBJ  : DISPKAR.PRG
+INI.OBJ      : INI.PRG
+PP.OBJ	     : PP.PRG
+REZ.OBJ      : REZ.PRG
+CONT_10.OBJ  : CONT_10.PRG
+scntck.obj   : scntck.asm
+scntck1.obj  : scntck1.asm
+cnttck.obj   : cnttck.asm
+wrtck14.obj  : wrtck14.asm
+uasm.obj     : uasm.asm
+xms.obj      : xms.asm
+sxms.obj     : sxms.prg
+UTIL.OBJ     : UTIL.PRG
+sound.obj    : sound.asm
+xsound.obj   : xsound.prg
+fond.obj     : fond.prg
+listic.obj   : listic.prg
+sent.obj     : sent.prg
+
+IZV.EXE      : DISPKAR.OBJ INI.OBJ REZ.OBJ CONT_10.OBJ scntck.obj scntck1.obj cnttck.obj wrtck14.obj uasm.obj UTIL.OBJ xms.obj sxms.obj sound.obj xsound.obj fond.obj listic.obj sent.obj
+	       BLINKER @izv.lnk

@@ -1,0 +1,29 @@
+makepath[.prg] :=  \TOMBOLA\TOPVOLEY\STAMPA\PRG
+makepath[.obj] :=  \TOMBOLA\TOPVOLEY\STAMPA\OBJ
+
+#ifdef DEBUG
+   CompOptions := /b
+#else
+   CompOptions :=
+#end
+
+#ifdef PROF
+   CompOptions := /l /dPROF
+#end
+
+.prg.obj:
+	 CLIPPER $< /o$@ $(CompOptions)
+
+MENU.OBJ     : MENU.PRG
+GRUPA.OBJ    : GRUPA.PRG
+KOLO.OBJ     : KOLO.PRG
+GK.OBJ	     : GK.PRG
+TPR.OBJ      : TPR.PRG
+UTIL.OBJ     : UTIL.PRG
+PRT.OBJ      : PRT.PRG
+PGSETUP.OBJ  : PGSETUP.PRG
+PROTB.OBJ    : PROTB.PRG
+PRTNEW.OBJ   : PRTNEW.PRG
+
+TOP32.EXE  : MENU.OBJ GK.OBJ TPR.OBJ UTIL.OBJ PRT.OBJ PGSETUP.OBJ PROTB.OBJ GRUPA.OBJ KOLO.OBJ PRTNEW.OBJ
+	     BLINKER @TOMBOLA.lnk

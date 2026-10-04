@@ -1,0 +1,63 @@
+# perform a full link
+BLINKER INCREMENTAL OFF
+# use a fixed overlay area instead of the free pool
+# BLINKER OVERLAY FIXED
+# allocate 60k to the overlay pool
+# BLINKER OVERLAY OPSIZE 60
+# call stack size
+# BLINKER PROCEDURE DEPTH 55
+# use expanded ram for overlay pool to save memory
+# BLINKER OVERLAY PAGEFRAME ON
+
+BLINKER EXECUTABLE CLIPPER E2048;
+BLINKER EXECUTABLE CLIPPER X:40;
+
+# use these commands only if using Blinker 2.0 and above
+# BLINKER OVERLAY THRESHOLD 256
+# BLINKER CACHE XMS 512, 25%
+# BLINKER CACHE EMS 128, 50%
+
+map=izv.map
+
+OUTPUT IZV
+
+FILE ..\obj\dispkar, ..\obj\__wait_b.obj, ..\obj\spro!!!!.obj
+
+# FILE sixger
+
+# @six2.lnk
+# @machsix.lnk
+
+BEGINAREA
+
+	 FILE ..\obj\cont_10
+         FILE ..\obj\ini
+
+	 FILE ..\obj\rez
+	 FILE ..\obj\fond
+	 FILE ..\obj\listic
+	 FILE ..\obj\scntck
+	 FILE ..\obj\scntck1
+         FILE ..\obj\cnttck
+	 FILE ..\obj\wrtck14
+	 FILE ..\obj\uasm
+	 FILE ..\obj\UTIL
+	 FILE ..\obj\xms
+	 FILE ..\obj\sxms
+
+	 FILE ..\obj\xsound
+	 FILE ..\obj\sound
+
+	 FILE ..\obj\SENT
+         FILE ..\obj\SPROMEPS
+	 FILE ..\obj\SPROCRYP
+
+ENDAREA
+
+LIB CT
+LIB llibg
+
+@c53blmax.lnk
+
+# LIB Terminal
+

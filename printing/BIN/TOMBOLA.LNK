@@ -1,0 +1,56 @@
+# perform a full link
+BLINKER INCREMENTAL OFF
+# use a fixed overlay area instead of the free pool
+BLINKER OVERLAY FIXED
+# allocate 60k to the overlay pool
+BLINKER OVERLAY OPSIZE 60
+# call stack size
+BLINKER PROCEDURE DEPTH 55
+# use expanded ram for overlay pool to save memory
+BLINKER OVERLAY PAGEFRAME ON
+
+BLINKER EXECUTABLE CLIPPER F80
+
+# use these commands only if using Blinker 2.0 and above
+BLINKER OVERLAY THRESHOLD 256
+BLINKER CACHE XMS 512, 25%
+BLINKER CACHE EMS 128, 50%
+
+OUTPUT TOP32
+
+FILE ..\OBJ\MENU, ..\obj\__wait_b.obj, CDXMACH6
+
+# Change this next line to use alternate Nations Sorting Order
+FILE sixuk
+
+@six2.lnk
+@machsix.lnk
+
+BEGINAREA
+  ALLOCATE extend.lib
+ENDAREA
+
+LIB clipper
+
+BEGINAREA
+
+  FILE ..\OBJ\GK
+  FILE ..\OBJ\TPR
+  FILE ..\OBJ\PGSETUP
+  FILE ..\OBJ\PROTB
+  FILE ..\OBJ\GRUPA
+  FILE ..\OBJ\KOLO
+  FILE ..\OBJ\UTIL
+
+  FILE ..\OBJ\PRT
+  FILE ..\OBJ\PRTNEW
+  FILE ..\OBJ\VIEW
+  FILE ..\OBJ\SAYTXT
+
+  LIB utils
+
+ENDAREA
+
+SEARCH Terminal
+SEARCH CT
+

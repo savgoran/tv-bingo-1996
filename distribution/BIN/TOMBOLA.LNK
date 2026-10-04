@@ -1,0 +1,85 @@
+# perform a full link
+BLINKER INCREMENTAL OFF
+# use a fixed overlay area instead of the free pool
+BLINKER OVERLAY FIXED
+# allocate 60k to the overlay pool
+BLINKER OVERLAY OPSIZE 60
+# call stack size
+BLINKER PROCEDURE DEPTH 55
+# use expanded ram for overlay pool to save memory
+BLINKER OVERLAY PAGEFRAME ON
+
+BLINKER EXECUTABLE CLIPPER F80
+BLINKER EXECUTABLE CLIPPER E2048;
+BLINKER EXECUTABLE CLIPPER X:40;
+# BLINKER DEMONSTRATION MINUTES 10
+
+# use these commands only if using Blinker 2.0 and above
+BLINKER OVERLAY THRESHOLD 256
+BLINKER CACHE XMS 512, 25%
+BLINKER CACHE EMS 128, 50%
+
+OUTPUT TOPV
+
+FILE ..\OBJ\MENU, ..\obj\spro!!!!.obj, CDXMACH6, ..\obj\__wait_b.obj
+
+# Change this next line to use alternate Nations Sorting Order
+FILE sixuk
+
+@six2.lnk
+@machsix.lnk
+
+# BEGINAREA
+  # ALLOCATE extend.lib
+# ENDAREA
+
+# LIB clipper
+
+BEGINAREA
+
+  FILE ..\OBJ\SERIJA
+  FILE ..\OBJ\KOLO1
+  FILE ..\OBJ\ZASTUP
+  FILE ..\OBJ\ZADUZM
+  FILE ..\OBJ\RAZD1
+  FILE ..\OBJ\PRIPREMA
+  FILE ..\OBJ\CENTAR
+  FILE ..\OBJ\COLLECT
+  FILE ..\OBJ\CAL
+  FILE ..\OBJ\UTIL
+
+  FILE ..\OBJ\PRT
+  FILE ..\OBJ\VIEW
+  FILE ..\OBJ\SAYTXT
+
+  FILE ..\OBJ\NEWREP
+  FILE ..\OBJ\XFORM
+
+  FILE ..\OBJ\FBACK
+  FILE ..\OBJ\FREST
+  FILE ..\OBJ\ZIP
+  FILE ..\OBJ\UNZIP
+  FILE ..\OBJ\DISK
+  FILE ..\OBJ\UASM
+
+  FILE ..\OBJ\sxms
+  FILE ..\OBJ\xms
+  FILE ..\OBJ\wrtck14
+
+  FILE ..\OBJ\TRI
+
+  #sentinel
+  FILE ..\OBJ\SENT
+  FILE ..\OBJ\SPROMEPS
+  FILE ..\OBJ\SPROCRYP
+  # FILE ..\OBJ\SPRO!!!!
+
+  LIB utils
+
+ENDAREA
+
+@cl520max.lnk
+
+LIB CT
+
+# SEARCH Terminal

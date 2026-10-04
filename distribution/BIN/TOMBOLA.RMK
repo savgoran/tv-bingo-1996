@@ -1,0 +1,56 @@
+makepath[.prg] := \tombola\topvoley\razd\PRG
+makepath[.asm] := \tombola\topvoley\razd\PRG
+makepath[.obj] := \tombola\topvoley\razd\OBJ
+
+#ifdef DEBUG
+   CompOptions := /b
+#else
+   CompOptions :=
+#end
+
+#ifdef PROF
+   CompOptions := /l /dPROF
+#end
+
+#ifdef ZASTITA
+   CompOptions := /l /dPROF /dZASTITA
+#end
+
+.prg.obj:
+	 CLIPPER $< /o$@ $(CompOptions)
+
+.asm.obj:
+	 MASM $<,$@;
+
+MENU.OBJ     : MENU.PRG
+SERIJA.OBJ   : SERIJA.PRG
+KOLO1.OBJ    : KOLO1.PRG
+ZASTUP.OBJ   : ZASTUP.PRG
+ZADUZM.OBJ   : ZADUZM.PRG
+RAZD1.OBJ    : RAZD1.PRG
+PRIPREMA.OBJ : PRIPREMA.PRG
+CENTAR.OBJ   : CENTAR.PRG
+COLLECT.OBJ  : COLLECT.PRG
+
+CAL.OBJ      : CAL.PRG
+FBACK.OBJ    : FBACK.PRG
+FREST.OBJ    : FREST.PRG
+UTIL.OBJ     : UTIL.PRG
+NEWREP.OBJ   : NEWREP.PRG
+XFORM.OBJ    : XFORM.PRG
+wrtck14.obj  : wrtck14.asm
+xms.obj      : xms.asm
+
+PRT.OBJ      : PRT.PRG
+view.obj     : view.asm
+
+TRI.OBJ      : TRI.PRG
+
+.prg.obj:
+	 CLIPPER $< /o$@ /m /n
+
+SENT.OBJ     : SENT.PRG
+sxms.obj     : sxms.prg
+
+TOPV.EXE  : MENU.OBJ SERIJA.OBJ KOLO1.OBJ ZASTUP.OBJ CENTAR.OBJ COLLECT.OBJ zaduzm.obj RAZD1.OBJ PRIPREMA.OBJ CAL.OBJ FBACK.OBJ FREST.OBJ PRT.OBJ view.obj UTIL.OBJ NEWREP.OBJ XFORM.OBJ wrtck14.obj SXMS.OBJ xms.obj TRI.OBJ SENT.OBJ
+	    BLINKER @TOMBOLA.lnk
