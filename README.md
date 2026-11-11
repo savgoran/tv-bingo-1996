@@ -46,11 +46,20 @@ The assembly routines show a compact, bit-oriented representation and match coun
 
 The developer recalls very fast searches, on the order of a million combinations per second on the target hardware. **That is a historical recollection, not a benchmark reproduced on modern hardware.** Any precise performance claim needs an identified original machine, dataset, measurement method and reproducible test.
 
-### Working beyond conventional DOS memory
+### Custom XMS memory support for large files
 
-This was a DOS application, not a system that could assume access to today's flat address spaces and abundant RAM.
+One of the central engineering challenges was a limitation of the development environment: **CA-Clipper did not provide the large-file-in-memory workflow this application required.** Goran Savkić therefore implemented a custom Clipper-to-assembly memory-management layer to make extended memory available to the TV Tombola application.
 
-The archive includes assembly-level extended-memory handling, including [`draw/PRG/XMS.ASM`](draw/PRG/XMS.ASM), and Clipper-to-assembly integration. The matching routines traverse pages of encoded ticket data rather than loading a large dataset as ordinary Clipper objects.
+This was not a replacement for the DOS HIMEM/XMS driver. It was **application-level support built on top of the documented XMS interface**, enabling Clipper code to allocate and access extended memory and to stage large files there.
+
+The preserved implementation shows the mechanism:
+
+- [`draw/PRG/XMS.ASM`](draw/PRG/XMS.ASM) detects XMS, obtains the driver entry point, queries and allocates memory, transfers pages between conventional and extended memory, and supplies file-to-XMS and XMS-to-file operations.
+- [`draw/PRG/SXMS.PRG`](draw/PRG/SXMS.PRG) exposes higher-level Clipper functions such as `XMS_Init`, `XMS_Alloc`, `F2XMS`, and `XMS_Close`.
+- `F2XMS` reads a file in **32 KiB chunks** and moves those chunks into extended memory. It also handles the header of the prepared `CNLIST.DAT` draw dataset.
+- [`draw/PRG/CNTTCK.ASM`](draw/PRG/CNTTCK.ASM) and [`draw/PRG/SCNTCK.ASM`](draw/PRG/SCNTCK.ASM) work through pages of encoded combinations held in extended memory, allowing performance-critical scanning without representing the entire dataset as ordinary Clipper objects.
+
+This custom bridge between a high-level database application and low-level DOS memory services was a **prerequisite for the large-scale, fast combination processing** at the heart of the system.
 
 ### Operational controls and recoverability
 
