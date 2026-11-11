@@ -12,6 +12,26 @@ Running a televised bingo game in the 1990s meant working within DOS memory limi
 
 The preserved sources show how business-oriented Clipper code was combined with purpose-built assembly routines for performance-sensitive work.
 
+## Where the system was used
+
+The software was developed for real television bingo/tombola productions and subsequently used or adapted for multiple broadcasters and organizers across the region. The following is the author's recollection of deployments and collaborations; exact broadcast dates and surviving production records are not yet fully documented.
+
+| Period | Broadcaster / location | Production or organizer |
+| --- | --- | --- |
+| **1995–1996** | **TV K9, Kragujevac** | Initial television tombola deployment |
+| **1996–1997** | **Montenegro** | Lottery of Montenegro (Lutrija Crne Gore) |
+| Later deployments; dates to be documented | **TV Toš** | Television tombola production |
+| Later deployments; dates to be documented | **Top Volley** | Television tombola production |
+| Date to be documented | **RTS (Radio Television of Serbia)** | **Keno**, organized by the Lottery of Serbia (Lutrija Srbije) |
+| Date to be documented | **TV Politika** | Production organized by **Partizan Volleyball Club**, associated with **Radoslav “Raša” Karaklajić** |
+| Date to be documented | **Banja Luka** | Production organized by **FK Borac** |
+| Date to be documented | **Aranđelovac** | Local television production associated with a broadcaster/operator known as **“Kinez”**, described by the author as Vesna Zmijanac's manager |
+| Date to be documented | **Novi Pazar** | Production associated with **Magi Sinanović** |
+
+This deployment history is essential context for the source code: the system was designed for repeated use under real production conditions, across different venues and organizers, not merely as a laboratory demonstration.
+
+The author recalls that comparatively few ready-made TV Tombola systems were available in the region at that time. This is a contemporary market impression, **not a verified market-share or exclusivity claim**.
+
 ## The system at a glance
 
 | Area | Role | Source directory |
