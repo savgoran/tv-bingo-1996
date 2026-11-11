@@ -18,7 +18,7 @@ The release includes the original `tombola.zip` archive together with its SHA-25
 
 The original DOS/Clipper build referenced commercial third-party development tools and libraries that are **not included in this repository**, including CA-Clipper, Blinker, SuccessWare SIX/SIXCDX, CA-Tools, Light Lib Graphics, and Sentinel/SuperPro components.
 
-Some low-level hardware-support routines appear to have been adapted from contemporaneous programming references or examples; exact provenance is still being documented.
+The Sound Blaster integration used the documented hardware programming interface available to DOS developers at the time. Consulting manufacturer documentation and contemporary programming examples was normal engineering practice, particularly for low-level DSP, DMA, and interrupt handling. Similarity in hardware I/O sequences does not, by itself, imply improper copying or diminish the original engineering work involved in integrating audio support into the TV Tombola system. Any verbatim third-party source code, if identified, should be assessed separately for attribution and redistribution terms.
 
 The repository is preserved primarily for historical and technical study. Reproducing the original executable requires compatible historical development tools and dependencies.
 
