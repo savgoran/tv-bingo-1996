@@ -28,6 +28,8 @@ The software was developed for real television bingo/tombola productions and sub
 | Date to be documented | **TV Sunce, Aranđelovac** | Television tombola production |
 | Date to be documented | **Novi Pazar** | Production associated with **Magi Sinanović** |
 
+**Broadcast schedule and reach:** According to the author's recollection, **TV Toš** and **Top Volley** aired **on Sundays at 20:00**, a prime-time slot, and were also **carried via satellite**. These details describe their historical broadcast reach; surviving schedules or satellite-carriage records have not yet been added to this archive.
+
 This deployment history is essential context for the source code: the system was designed for repeated use under real production conditions, across different venues and organizers, not merely as a laboratory demonstration.
 
 The author recalls that comparatively few ready-made TV Tombola systems were available in the region at that time. This is a contemporary market impression, **not a verified market-share or exclusivity claim**.
