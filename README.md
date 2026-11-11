@@ -44,7 +44,7 @@ The assembly routines show a compact, bit-oriented representation and match coun
 - [`draw/PRG/SCNTCK.ASM`](draw/PRG/SCNTCK.ASM) implements a specialized complete-match check and collects matching ticket identifiers.
 - [`draw/PRG/REZ.PRG`](draw/PRG/REZ.PRG) calls the counting routine and processes result categories, including 15, 14 and 13 matches.
 
-The developer recalls very fast searches, on the order of a million combinations per second on the target hardware. **That is a historical recollection, not a benchmark reproduced on modern hardware.** Any precise performance claim needs an identified original machine, dataset, measurement method and reproducible test.
+The author recalls very fast searches, on the order of a million combinations per second on the target hardware. **That is a historical recollection, not a benchmark reproduced on modern hardware.** Any precise performance claim needs an identified original machine, dataset, measurement method and reproducible test.
 
 ### Custom XMS memory support for large files
 
@@ -124,7 +124,7 @@ The build references commercial tools and libraries **not included in this repos
 
 ## Historical context and attribution
 
-The software was originally developed by **Goran Savkić** in the mid-1990s for the TV Tombola workflow. This repository preserves available project source material for technical and historical study.
+The author originally developed the software in the mid-1990s for the TV Tombola workflow. This repository preserves available project source material for technical and historical study.
 
 It is not presented as a claim that every library, hardware example, development tool or dependency was authored from scratch. The engineering work lies in the design, adaptation and integration of the complete solution. Where identifiable third-party code is present, its attribution and redistribution conditions should be considered separately.
 
