@@ -25,7 +25,7 @@ The software was developed for real television bingo/tombola productions and sub
 | Date to be documented | **RTS (Radio Television of Serbia)** | **Keno**, organized by the Lottery of Serbia (Lutrija Srbije) |
 | Date to be documented | **TV Politika** | Production organized by **Partizan Volleyball Club**, associated with **Radoslav “Raša” Karaklajić** |
 | Date to be documented | **Banja Luka** | Production organized by **FK Borac** |
-| Date to be documented | **Aranđelovac** | Local television production; broadcaster not yet identified |
+| Date to be documented | **TV Sunce, Aranđelovac** | Television tombola production |
 | Date to be documented | **Novi Pazar** | Production associated with **Magi Sinanović** |
 
 This deployment history is essential context for the source code: the system was designed for repeated use under real production conditions, across different venues and organizers, not merely as a laboratory demonstration.
