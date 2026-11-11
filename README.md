@@ -48,7 +48,7 @@ The developer recalls very fast searches, on the order of a million combinations
 
 ### Custom XMS memory support for large files
 
-One of the central engineering challenges was a limitation of the development environment: **CA-Clipper did not provide the large-file-in-memory workflow this application required.** Goran Savkić therefore implemented a custom Clipper-to-assembly memory-management layer to make extended memory available to the TV Tombola application.
+One of the central engineering challenges was a limitation of the development environment: **CA-Clipper did not provide the large-file-in-memory workflow this application required.** The author therefore implemented a custom Clipper-to-assembly memory-management layer to make extended memory available to the TV Tombola application.
 
 This was not a replacement for the DOS HIMEM/XMS driver. It was **application-level support built on top of the documented XMS interface**, enabling Clipper code to allocate and access extended memory and to stage large files there.
 
