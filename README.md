@@ -20,8 +20,8 @@ The software was developed for real television bingo/tombola productions and sub
 | --- | --- | --- |
 | **1995–1996** | **TV K9, Kragujevac** | Initial television tombola deployment |
 | **1996–1997** | **Montenegro** | Lottery of Montenegro (Lutrija Crne Gore) |
-| Later deployments; dates to be documented | **TV Toš** | Television tombola production |
-| Later deployments; dates to be documented | **Top Volley** | Television tombola production |
+| Later deployments; dates to be documented | **TV Toš** | TV Tombola organized by **FK Mladost** |
+| Later deployments; dates to be documented | **Top Volley** | Organized by the Budva volleyball club **OK Budvanska rivijera** (formerly **OK Avala Budva**) |
 | Date to be documented | **RTS (Radio Television of Serbia)** | **Keno**, organized by the Lottery of Serbia (Lutrija Srbije) |
 | Date to be documented | **TV Politika** | Production organized by **Partizan Volleyball Club**, associated with **Radoslav “Raša” Karaklajić** |
 | Date to be documented | **Banja Luka** | Production organized by **FK Borac** |
